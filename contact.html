@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Nathan Nguyen</title>
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Nathan Nguyen</title>
+  
+  <!-- This line sets your browser tab icon -->
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a class="name" href="index.html">Nathan Nguyen</a>
+      <span class="title">Electrical Engineering Student</span>
+    </div>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="portfolio.html">portfolio</a>
+      <a href="resume.html">resume</a>
+      <a class="active" href="contact.html">contact</a>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <h1>let's make something happen</h1>
+
+    <iframe name="hidden_iframe" title="form target" style="display:none"></iframe>
+
+    <form id="contact-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSeqGZSbZBymyTTaMnO7YeoTdLOs3ZnKVjRO1VKHXuJvcDLLQA/formResponse"
+          method="POST" target="hidden_iframe">
+      <div class="name-row">
+        <label>First Name <small>(required)</small>
+          <input type="text" name="entry.457008966" required>
+        </label>
+        <label>Last Name <small>(required)</small>
+          <input type="text" name="entry.1453457360" required>
+        </label>
+      </div>
+      <label>Email Address <small>(required)</small>
+        <input type="email" name="entry.2095623285" required>
+      </label>
+      <label>Subject <small>(required)</small>
+        <input type="text" name="entry.1551645468" required>
+      </label>
+      <label>Message <small>(required)</small>
+        <textarea name="entry.1803993835" required></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="thanks" hidden style="text-align:center; font-size:1.3rem; padding:2rem 0;">
+      Thanks for reaching out! I'll get back to you soon.
+    </p>
+
+    <p style="text-align:center; margin-top:3rem;">
+      <a href="mailto:ncnguyen1006@gmail.com" style="color:var(--teal-dark);font-weight:700;">Email</a> ·
+      <a href="https://github.com/nathancreates" style="color:var(--teal-dark);font-weight:700;">GitHub</a> ·
+      <a href="https://linkedin.com/in/nathan-nguyen-64410a379" style="color:var(--teal-dark);font-weight:700;">LinkedIn</a>
+    </p>
+  </main>
+
+  <footer>© 2026 Nathan Nguyen</footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const thanks = document.getElementById("thanks");
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        form.style.display = "none";
+        thanks.hidden = false;
+      }, 400);
+    });
+  </script>
+</body>
+</html>
